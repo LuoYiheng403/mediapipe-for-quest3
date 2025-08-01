@@ -21,12 +21,16 @@ namespace Mediapipe.Unity.Sample.Holistic
         [SerializeField] FaceLine _faceLine;
         [SerializeField] FacePosition _facePosition;
         [SerializeField] float _weight = 1280, _height = 960;
+        
 
         // 使用HashSet优化点检查
         private HashSet<int> _facePointMap = new HashSet<int> { 10, 19, 61, 133, 152, 234, 291, 362, 454 };
+        
 
         public void draw(NormalizedLandmarkList list, string position)
         {
+            
+
             if (list == null) return;
             if (list.Landmark == null || list.Landmark.Count == 0) return;
 
